@@ -20,10 +20,14 @@ export class Phrase {
 
 
   private extract_unique_words(texte: string): string[] {
-    var ponctuation = /[,\.;]/gm;
-    
-    console.log('$'+texte.replace(ponctuation, '')+'$')
-    let words_array: string[] = texte.replace(re, ' ').replace(/\s\s+/gm, ' ').split(' ');
+    var ponctuation = /\s*([\.,;\/ ]|’.)\s*/gm;
+
+    let words_array: string[] = texte.replace(ponctuation, ' ')
+    .replace(/\s{2,}/,' ')
+    .trim()
+    .split(' ');
+
+    console.log(words_array);
     let words = new SortedSet(words_array);
     return Array.from(words);
   }

@@ -27,7 +27,7 @@ describe('Phrase tests', () => {
          'ability',      'accessed',     'all',
          'allows',       'and',          'be',
          'browser',      'cache',        'can',
-         'clear',        'client’s',     'computer',
+         'clear',        'client',     'computer',
          'data',         'date',         'erase',
          'expiration',   'has',          'in',
          'is',           'it',           'key',
